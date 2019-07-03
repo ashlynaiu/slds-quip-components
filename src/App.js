@@ -1,10 +1,10 @@
 import React from 'react';
-import Table from './components/Table';
+import VisualPicker from './components/Visual Picker';
 
 function App() {
   return (
-    <div className="App">
-      <Table></Table>
+    <div className="app">
+      <VisualPicker></VisualPicker>
     </div>
   );
 }
