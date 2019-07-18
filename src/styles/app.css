@@ -86,7 +86,8 @@ p {
   border: 0;
   border-radius: 0;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: .75rem; }
 
 .input-item {
   text-align: left;
@@ -107,7 +108,7 @@ p {
   hyphens: auto;
   display: inline-block;
   color: #3e3e3c;
-  font-size: .75rem;
+  font-size: 1rem;
   padding-right: .5rem;
   padding-top: .25rem;
   margin-bottom: .125rem; }
@@ -125,7 +126,7 @@ p {
 
 .visual-check {
   position: absolute;
-  top: -.0625rem;
+  top: 0rem;
   right: .625rem;
   width: .5rem;
   height: .5rem;
