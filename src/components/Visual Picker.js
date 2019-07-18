@@ -28,9 +28,11 @@ class VisualPicker extends Component {
                       </span>
                     </span>
                     <span className="visual-check">
-                      <svg className="" aria-hidden="true">
-                        <use xlinkHref={`${UtilityIcons}#/check`}></use>
+                      <span>
+                        <svg className="" aria-hidden="true">
+                        <use xlinkHref={`${UtilityIcons}#check`}></use>
                       </svg>
+                      </span>
                     </span>
                   </label>
                 </div>
