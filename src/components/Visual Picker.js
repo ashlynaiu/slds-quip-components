@@ -8,14 +8,14 @@ class VisualPicker extends Component {
     return (
         <div className="visual-picker">
           <fieldset class="">
-            <legend className="">Select an option</legend>
+            <legend className="label">Select an option</legend>
               <div className="visual-picker-container">
                 <input type="radio" id="v" value="" name="options" />
                 <label for="">
                   <span className="input-item">
                     <span>
-                      <span className="">Item Text</span>
-                      <span className="">Some optional item description to help the user better understand what this option is about.</span>
+                      <span className="visual-header">Item Text</span>
+                      <span className="visual-description">Some optional item description to help the user better understand what this option is about.</span>
                     </span>
                   </span>
                   <span className="">

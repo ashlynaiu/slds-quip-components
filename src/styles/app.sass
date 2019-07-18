@@ -68,19 +68,55 @@ p
   display: flex
   position: relative
   flex-direction: column
+  border: 0
+  border-radius: 0
   text-align: center
   cursor: pointer
-  border-width: 0px
-  border-style: initial
-  border-color: initial
-  border-image: initial
-  border-radius: 0px
 
 .input-item
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 2px
-    background: rgb(255, 255, 255)
-    border-width: 1px
-    border-style: solid
-    border-color: rgb(221, 219, 218)
-    border-image: initial
-    border-radius: 0.25rem
+  text-align: left
+  padding: 1rem
+  display: flex
+  margin: auto
+  background: #fff
+  box-shadow: 0 2px 2px rgba(0,0,0,.05)
+  border: 1px solid #dddbda
+  border-radius: .25rem
+
+  span
+    display: block
+
+.visual-picker input
+  width: 1px
+  height: 1px
+  border: 0
+  clip: rect(0 0 0 0)
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+
+.visual-picker fieldset
+  position: relative
+
+.visual-picker .label
+  overflow-wrap: break-word
+  word-wrap: break-word
+  hyphens: auto
+  display: inline-block
+  color: #3e3e3c
+  font-size: .75rem
+  padding-right: .5rem
+  padding-top: .25rem
+  margin-bottom: .125rem
+
+.visual-header
+  font-weight: 300
+  font-size: 1.25rem
+  line-height: 1.25
+
+.visual-description
+  font-size: .75rem
+  margin-top: .25rem
+  line-height: 1.25
+  color: #3e3e3c
