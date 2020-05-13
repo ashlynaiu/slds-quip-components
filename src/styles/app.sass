@@ -37,11 +37,6 @@ a
 	&:hover
 		text-decoration: none
 
-p
-	font-size: 16px
-	line-height: 24px
-	font-weight: 300
-
 .app
   width: 70%
   margin: 0 auto
@@ -78,6 +73,24 @@ p
     border-right-color: #1589ee
     border-top-color: #1589ee
 
+  .visual-check
+    position: absolute
+    top: 0rem
+    right: .625rem
+    width: .5rem
+    height: .5rem
+    display: inline-block
+    border-radius: .25rem
+    line-height: 1
+
+    svg
+      width: 1rem
+      height: 1rem
+      z-index: 100
+      line-height: 1
+      fill: #fff
+      vertical-align: middle
+
 .visual-picker input:hover~label
   .input-item
     border: 1px solid #1589ee
@@ -109,17 +122,6 @@ p
   span
     display: block
 
-.visual-picker .label
-  overflow-wrap: break-word
-  word-wrap: break-word
-  hyphens: auto
-  display: inline-block
-  color: #3e3e3c
-  font-size: 1rem
-  padding-right: .5rem
-  padding-top: .25rem
-  margin-bottom: .125rem
-
 .visual-header
   font-weight: 300
   font-size: 1.25rem
@@ -132,19 +134,54 @@ p
   color: #3e3e3c
 
 .visual-check
-  position: absolute
-  top: 0rem
-  right: .625rem
-  width: .5rem
-  height: .5rem
-  display: inline-block
-  border-radius: .25rem
-  line-height: 1
+  display: none
 
-  svg
-    width: 1rem
-    height: 1rem
-    z-index: 100
-    line-height: 1
-    fill: #fff
-    vertical-align: middle
+//////////////
+//Variables//
+////////////
+$quip-black: #353535
+$primary-blue: #3D87F5
+$medium-gray: #808080
+
+/////////////////////////
+//Animation Components//
+///////////////////////
+
+.animation
+  .slds-card__header-title h2
+    font-size: 14px
+    font-weight: bold
+
+  h3
+    font-size: 14px
+  p
+    font-size: 14px
+    line-height: 20px
+
+  .slds-card__body
+    display: none
+    color: $quip-black
+  .slds-card__header
+    cursor: pointer
+
+  .slds-card
+    width: 300px
+    transition: transform .15s ease-out
+    // transform: scale(0.94)
+    will-change: transform
+    backface-visibility: hidden
+    .slds-card__body
+      display: none
+      font-size: 14px
+
+      span
+        font-weight: bold
+        color: $medium-gray
+
+  .expanded
+    transform: scale(1.04, 1.04)
+    backface-visibility: hidden
+    .slds-card__body
+      display: block
+      width: inherit
+
