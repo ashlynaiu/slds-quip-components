@@ -2,6 +2,7 @@
   "name": "slds-quip-components",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@salesforce-ux/design-system": "^2.8.3",
     "react": "^16.8.6",
