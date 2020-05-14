@@ -10,26 +10,30 @@ class Animation extends Component {
   }
 
   toggleOpen() {
-    this.setState({ isOpen : !this.state.isOpen })
+    this.setState({ isOpen : !this.state.isOpen });
+    console.log('test');
   }
 
   render() {
     let isOpen = this.state.isOpen ? 'expanded' : '';
+
     let bodyContent = () => {
+      console.log('test2')
       return (
-        <div className="slds-card__body slds-card__body_inner">
+        <div className="content">
           <p><span>Relationship: </span>Strong and a bunch of extra text to see what happens</p>
           <p><span>Influence: </span>Neutral</p>
         </div>
       )
     }
+
     return (
       <div className="animation">
         <article className={`slds-card ${isOpen}`}>
           <div className="slds-card__header">
-            <header className="slds-media slds-media_center slds-has-flexi-truncate slds-m-bottom_x-small" onClick={this.toggleOpen}>
+            <header className="slds-media slds-media_center slds-has-flexi-truncate slds-m-bottom_xx-small">
               <div className="slds-media__figure">
-                <span>i</span>
+                <div className="dot"></div>
               </div>
               <div className="slds-media__body">
                 <h2 className="slds-card__header-title">
@@ -39,7 +43,10 @@ class Animation extends Component {
             </header>
             <h3>Chief Executive Officer</h3>
           </div>
+          <div className="slds-card__body slds-card__body_inner">
             {isOpen ? bodyContent() : ''}
+            <button onClick={this.toggleOpen} className="show-more">{isOpen ? 'Show Less' : 'Show More'}</button>
+          </div>
         </article>
       </div>
       )

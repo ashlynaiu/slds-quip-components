@@ -29,10 +29,12 @@ body {
 
 a {
   color: #3e3e3c; }
-  a img {
-    outline-color: none; }
-  a:hover {
-    text-decoration: none; }
+
+a img {
+  outline-color: none; }
+
+a:hover {
+  text-decoration: none; }
 
 .app {
   width: 70%;
@@ -51,8 +53,9 @@ a {
   margin: -1px;
   overflow: hidden;
   padding: 0px; }
-  .visual-picker input:hover {
-    background-color: red; }
+
+.visual-picker input:hover {
+  background-color: red; }
 
 .visual-picker input:checked ~ label .input-item {
   border: 1px solid #1589ee;
@@ -77,13 +80,14 @@ a {
   display: inline-block;
   border-radius: .25rem;
   line-height: 1; }
-  .visual-picker input:checked ~ label .visual-check svg {
-    width: 1rem;
-    height: 1rem;
-    z-index: 100;
-    line-height: 1;
-    fill: #fff;
-    vertical-align: middle; }
+
+.visual-picker input:checked ~ label .visual-check svg {
+  width: 1rem;
+  height: 1rem;
+  z-index: 100;
+  line-height: 1;
+  fill: #fff;
+  vertical-align: middle; }
 
 .visual-picker input:hover ~ label .input-item {
   border: 1px solid #1589ee;
@@ -111,8 +115,9 @@ a {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
   border: 1px solid #dddbda;
   border-radius: .25rem; }
-  .input-item span {
-    display: block; }
+
+.input-item span {
+  display: block; }
 
 .visual-header {
   font-weight: 300;
@@ -136,31 +141,54 @@ a {
   font-size: 14px; }
 
 .animation p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px; }
 
-.animation .slds-card__body {
-  display: none;
-  color: #353535; }
+.animation .slds-card {
+  width: 250px;
+  position: relative;
+  display: inline-block;
+  box-shadow: none;
+  z-index: 1; }
+
+.animation .slds-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: .25rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 500ms; }
+
+.animation .slds-card:hover::after {
+  opacity: 1; }
+
+.animation .slds-card.expanded::after {
+  opacity: 1; }
 
 .animation .slds-card__header {
-  cursor: pointer; }
+  margin-bottom: 8px; }
 
-.animation .slds-card {
-  width: 300px;
-  transition: transform .15s ease-out;
-  will-change: transform;
-  backface-visibility: hidden; }
-  .animation .slds-card .slds-card__body {
-    display: none;
-    font-size: 14px; }
-    .animation .slds-card .slds-card__body span {
-      font-weight: bold;
-      color: #808080; }
+.animation .slds-card__header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green; }
 
-.animation .expanded {
-  transform: scale(1.04, 1.04);
-  backface-visibility: hidden; }
-  .animation .expanded .slds-card__body {
-    display: block;
-    width: inherit; }
+.animation .slds-card__body {
+  color: #353535;
+  font-size: 12px;
+  margin-top: 8px; }
+
+.animation .slds-card__body span {
+  font-weight: bold;
+  color: #808080; }
+
+.animation .slds-card__body .content {
+  margin-bottom: 8px; }
+
+.animation .slds-card__body .show-more {
+  color: #3D87F5; }

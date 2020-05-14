@@ -155,33 +155,53 @@ $medium-gray: #808080
   h3
     font-size: 14px
   p
-    font-size: 14px
+    font-size: 13px
     line-height: 20px
 
-  .slds-card__body
-    display: none
-    color: $quip-black
-  .slds-card__header
-    cursor: pointer
-
   .slds-card
-    width: 300px
-    transition: transform .15s ease-out
-    // transform: scale(0.94)
-    will-change: transform
-    backface-visibility: hidden
-    .slds-card__body
-      display: none
-      font-size: 14px
+    width: 250px
+    position: relative
+    display: inline-block
+    box-shadow: none
+    z-index: 1
 
-      span
-        font-weight: bold
-        color: $medium-gray
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      border-radius: .25rem
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2)
+      opacity: 0
+      transition: opacity 500ms
 
-  .expanded
-    transform: scale(1.04, 1.04)
-    backface-visibility: hidden
-    .slds-card__body
-      display: block
-      width: inherit
+    &:hover::after
+      opacity: 1
 
+    &.expanded::after
+      opacity: 1
+
+  .slds-card__header
+    margin-bottom: 8px
+    .dot
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: green
+
+  .slds-card__body
+    color: $quip-black
+    font-size: 12px
+    margin-top: 8px
+
+    span
+      font-weight: bold
+      color: $medium-gray
+
+    .content
+      margin-bottom: 8px
+
+    .show-more
+      color: $primary-blue
