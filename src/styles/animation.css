@@ -1,0 +1,52 @@
+.animation .slds-card__header-title h2 {
+  font-size: 14px;
+  font-weight: bold; }
+
+.animation h3 {
+  font-size: 14px; }
+
+.animation p {
+  font-size: 13px;
+  line-height: 20px; }
+
+.animation .slds-card {
+  width: 250px;
+  position: relative;
+  display: inline-block;
+  box-shadow: none;
+  z-index: 1; }
+  .animation .slds-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 400ms; }
+  .animation .slds-card:hover::after {
+    opacity: 1; }
+  .animation .slds-card.expanded::after {
+    opacity: 1; }
+
+.animation .slds-card__header {
+  margin-bottom: 8px; }
+  .animation .slds-card__header .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green; }
+
+.animation .slds-card__body {
+  color: #353535;
+  font-size: 12px;
+  margin-top: 8px; }
+  .animation .slds-card__body span {
+    font-weight: bold;
+    color: #808080; }
+  .animation .slds-card__body .content {
+    margin-bottom: 8px; }
+  .animation .slds-card__body .show-more {
+    color: #3D87F5; }
