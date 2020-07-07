@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import VisualPicker from './components/Visual Picker';
-import Animation from './components/Animation';
+import Animation from './components/Animation Components/Animation';
 
 function App() {
   return (

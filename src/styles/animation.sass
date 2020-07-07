@@ -10,6 +10,9 @@ $medium-gray: #808080
 ///////////////////////
 
 .animation
+  display: flex
+  flex-direction: column
+
   .slds-card__header-title h2
     font-size: 14px
     font-weight: bold
@@ -19,6 +22,12 @@ $medium-gray: #808080
   p
     font-size: 13px
     line-height: 20px
+
+  button
+    background: transparent
+
+  .button-group
+    display: none
 
   .slds-card
     width: 250px
@@ -39,8 +48,31 @@ $medium-gray: #808080
       opacity: 0
       transition: opacity 400ms
 
-    &:hover::after
-      opacity: 1
+    &:hover
+      &::after
+        opacity: 1
+
+      .button-group
+        display: flex
+        position: absolute
+        top: -20px
+        right: 8px
+
+      .button-item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 32px
+        height: 32px
+        background: white
+        border: 1px solid #dddbda
+        border-radius: 50%
+        padding-bottom: 2px
+        &:last-child
+          margin-left: 10px
+        &:hover
+          svg
+            fill: $primary-blue
 
     &.expanded::after
       opacity: 1
@@ -51,7 +83,7 @@ $medium-gray: #808080
       width: 10px
       height: 10px
       border-radius: 50%
-      background-color: green
+      background-color: #2CAB21
 
   .slds-card__body
     color: $quip-black
