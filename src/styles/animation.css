@@ -24,7 +24,8 @@
   position: relative;
   display: inline-block;
   box-shadow: none;
-  z-index: 1; }
+  z-index: 1;
+  margin-bottom: 1.5rem; }
 
 .animation .slds-card::after {
   content: "";
@@ -90,3 +91,30 @@
 
 .animation .slds-card__body .show-more {
   color: #3D87F5; }
+
+.animation .slds-card__body .card-footer {
+  display: flex;
+  justify-content: space-between; }
+
+.animation.collapsed {
+  display: inline-block;
+  position: relative; }
+
+.animation.collapsed .parent {
+  z-index: 10; }
+
+.animation.collapsed .child {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 0; }
+
+.animation.collapsed .child .button-group {
+  display: none; }
+
+.animation.collapsed .slds-card {
+  margin-top: 0; }
+
+.animation.collapsed:hover .slds-card::after {
+  opacity: 1;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); }

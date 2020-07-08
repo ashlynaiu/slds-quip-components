@@ -35,6 +35,7 @@ $medium-gray: #808080
     display: inline-block
     box-shadow: none
     z-index: 1
+    margin-bottom: 1.5rem
 
     &::after
       content: ""
@@ -99,3 +100,31 @@ $medium-gray: #808080
 
     .show-more
       color: $primary-blue
+
+    .card-footer
+      display: flex
+      justify-content: space-between
+
+.animation.collapsed
+  display: inline-block
+  position: relative
+
+  .parent
+    z-index: 10
+
+  .child
+    position: absolute
+    top: 8px
+    right: 8px
+    z-index: 0
+
+    .button-group
+      display: none
+
+  .slds-card
+    margin-top: 0
+
+  &:hover
+    .slds-card::after
+        opacity: 1
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1)
