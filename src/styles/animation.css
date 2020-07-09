@@ -1,120 +1,95 @@
 .animation {
   display: flex;
   flex-direction: column; }
-
-.animation .slds-card__header-title h2 {
-  font-size: 14px;
-  font-weight: bold; }
-
-.animation h3 {
-  font-size: 14px; }
-
-.animation p {
-  font-size: 13px;
-  line-height: 20px; }
-
-.animation button {
-  background: transparent; }
-
-.animation .button-group {
-  display: none; }
-
-.animation .slds-card {
-  width: 250px;
-  position: relative;
-  display: inline-block;
-  box-shadow: none;
-  z-index: 1;
-  margin-bottom: 1.5rem; }
-
-.animation .slds-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: .25rem;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 400ms; }
-
-.animation .slds-card:hover::after {
-  opacity: 1; }
-
-.animation .slds-card:hover .button-group {
-  display: flex;
-  position: absolute;
-  top: -20px;
-  right: 8px; }
-
-.animation .slds-card:hover .button-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  background: white;
-  border: 1px solid #dddbda;
-  border-radius: 50%;
-  padding-bottom: 2px; }
-
-.animation .slds-card:hover .button-item:last-child {
-  margin-left: 10px; }
-
-.animation .slds-card:hover .button-item:hover svg {
-  fill: #3D87F5; }
-
-.animation .slds-card.expanded::after {
-  opacity: 1; }
-
-.animation .slds-card__header {
-  margin-bottom: 8px; }
-
-.animation .slds-card__header .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #2CAB21; }
-
-.animation .slds-card__body {
-  color: #353535;
-  font-size: 12px;
-  margin-top: 8px; }
-
-.animation .slds-card__body span {
-  font-weight: bold;
-  color: #808080; }
-
-.animation .slds-card__body .content {
-  margin-bottom: 8px; }
-
-.animation .slds-card__body .show-more {
-  color: #3D87F5; }
-
-.animation .slds-card__body .card-footer {
-  display: flex;
-  justify-content: space-between; }
+  .animation .slds-card__header-title h2 {
+    font-size: 14px;
+    font-weight: bold; }
+  .animation h3 {
+    font-size: 14px; }
+  .animation p {
+    font-size: 13px;
+    line-height: 20px; }
+  .animation button {
+    background: transparent; }
+  .animation .button-group {
+    display: none; }
+  .animation .slds-card {
+    width: 250px;
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    z-index: 1;
+    margin-bottom: 1.5rem; }
+    .animation .slds-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border-radius: .25rem;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 400ms; }
+    .animation .slds-card:hover::after {
+      opacity: 1; }
+    .animation .slds-card:hover .button-group {
+      display: flex;
+      position: absolute;
+      top: -20px;
+      right: 8px; }
+    .animation .slds-card:hover .button-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background: white;
+      border: 1px solid #dddbda;
+      border-radius: 50%;
+      padding-bottom: 2px; }
+      .animation .slds-card:hover .button-item:last-child {
+        margin-left: 10px; }
+      .animation .slds-card:hover .button-item:hover svg {
+        fill: #3D87F5; }
+    .animation .slds-card.expanded::after {
+      opacity: 1; }
+  .animation .slds-card__header {
+    margin-bottom: 8px; }
+    .animation .slds-card__header .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2CAB21; }
+  .animation .slds-card__body {
+    color: #353535;
+    font-size: 12px;
+    margin-top: 8px; }
+    .animation .slds-card__body span {
+      font-weight: bold;
+      color: #808080; }
+    .animation .slds-card__body .content {
+      margin-bottom: 8px; }
+    .animation .slds-card__body .show-more {
+      color: #3D87F5; }
+    .animation .slds-card__body .card-footer {
+      display: flex;
+      justify-content: space-between; }
 
 .animation.collapsed {
   display: inline-block;
   position: relative; }
-
-.animation.collapsed .parent {
-  z-index: 10; }
-
-.animation.collapsed .child {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 0; }
-
-.animation.collapsed .child .button-group {
-  display: none; }
-
-.animation.collapsed .slds-card {
-  margin-top: 0; }
-
-.animation.collapsed:hover .slds-card::after {
-  opacity: 1;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); }
+  .animation.collapsed .parent {
+    z-index: 10; }
+  .animation.collapsed .child {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 0; }
+    .animation.collapsed .child .button-group {
+      display: none; }
+  .animation.collapsed .slds-card {
+    margin-top: 0; }
+  .animation.collapsed:hover .slds-card::after {
+    opacity: 1;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); }

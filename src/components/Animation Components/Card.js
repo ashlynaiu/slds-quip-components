@@ -23,6 +23,7 @@ class Card extends Component {
   render() {
     let cardType = this.props.cardType
     let isOpen = this.state.isOpen ? 'expanded' : '';
+    let collapsedState = this.props.collapsedState ? 'expand_alt' : 'contract_alt';
 
     let bodyContent = () => {
       return (
@@ -37,7 +38,7 @@ class Card extends Component {
       return (
         <div className="button-group">
           <button className="button-item" onClick={this.cardHandler}>
-            <Icon object="contract_alt" type="utility" size="x-small" />
+            <Icon object={collapsedState} type="utility" size="x-small" />
           </button>
           <button className="button-item">
             <Icon object="edit" type="utility" size="x-small" />

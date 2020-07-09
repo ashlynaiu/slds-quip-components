@@ -19,12 +19,13 @@ class Animation extends Component {
 
   render() {
     let applyCollapsedStyles = this.state.cardCollapsed ? 'collapsed' : '';
+    let collapsedState = this.state.cardCollapsed ? true : false;
 
     return (
       <div className={`animation ${applyCollapsedStyles}`}>
-        <Card index="1" toggleCollapsed={this.toggleCollapsed} cardType="parent"/>
-        <Card index="2" toggleCollapsed={this.toggleCollapsed} cardType="child"/>
-        <Card index="3" toggleCollapsed={this.toggleCollapsed} cardType="child"/>
+        <Card index="1" toggleCollapsed={this.toggleCollapsed} cardType="parent" collapsedState={collapsedState}/>
+        <Card index="2" toggleCollapsed={this.toggleCollapsed} cardType="child" collapsedState={collapsedState} />
+        <Card index="3" toggleCollapsed={this.toggleCollapsed} cardType="child" collapsedState={collapsedState}/>
       </div>
       )
   }
